@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ConvertToUTF8",
+		"Emmet",
+		"getdate",
+		"jQuery",
+		"my_plugin",
+		"Package Control",
+		"SystemVerilog",
+		"Tag",
+		"Verilog"
+	]
+}

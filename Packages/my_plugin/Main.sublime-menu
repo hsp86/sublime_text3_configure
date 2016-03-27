@@ -1,0 +1,5 @@
+[{//向edit菜单中添加菜单项，这个文件名必须为Main.sublime-menu；command指定要执行.py文件中的命令
+    "id": "edit","children":[
+        {"caption": "自定义插件演示","command": "hsp"}
+    ]
+}]

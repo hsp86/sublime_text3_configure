@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "yyyy-mm-dd替换为当前时间",
+        "command": "getdate"
+    }
+]

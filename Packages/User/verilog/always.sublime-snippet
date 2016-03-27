@@ -1,0 +1,33 @@
+
+<snippet>
+    <content><![CDATA[
+//**************************************************************************************************
+//  模块名称：${1:模块名称}
+//  功能描述：${2:模块说明}。
+//**************************************************************************************************
+always @(posedge clk or negedge rst_n)
+begin
+    if(rst_n == 1'b0)
+    begin
+        ${3:signal} <= #1 ${4:1'b0};
+    end
+    else
+    begin
+        if(clear == 1'b1)
+        begin
+            ${3:signal} <= #1 ${4:1'b0};
+        end
+        else
+        begin
+            
+        end
+    end
+end
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>hsp_always</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.verilog,source.systemverilog</scope>
+    <description>输入always及其注释</description>
+</snippet>

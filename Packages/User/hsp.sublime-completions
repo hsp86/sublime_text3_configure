@@ -1,0 +1,10 @@
+{
+   "scope": "text.html,source.js",//指定触发文件类型
+
+   "completions":
+   [
+      { "trigger": "h", "contents": "<h href=\"$1\">$0</h>" },//指定命令，触发文本，可以多个
+      { "trigger": "abbr\t<abbr>", "contents": "<abbr>$0</abbr>" },//特殊符号要转义
+      { "trigger": "acronym", "contents": "<acronym>$0</acronym>" }
+   ]
+}

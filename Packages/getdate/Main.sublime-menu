@@ -1,0 +1,5 @@
+[{
+    "id": "edit","children":[
+        {"caption": "yyyy-mm-dd替换为当前日期时间","command": "getdate"}
+    ]
+}]

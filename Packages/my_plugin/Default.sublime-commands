@@ -1,0 +1,6 @@
+[
+    {//指定可以在ctrl+shift+p中搜索的字符，和指定要执行的.py中定义的命令
+        "caption": "Ctrl+Shift+P自定义插件",
+        "command": "hsp"
+    }
+]

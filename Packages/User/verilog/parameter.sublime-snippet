@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+parameter       ${1:param_name} = ${2:32},
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>hsp_parameter</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.verilog,source.systemverilog</scope>
+    <description>输入parameter</description>
+</snippet>

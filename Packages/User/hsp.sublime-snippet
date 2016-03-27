@@ -1,0 +1,27 @@
+<snippet>
+    <content><![CDATA[
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>${1:网页标题}</title>
+</head>
+<body>
+    ${2:网页内容}
+</body>
+</html>
+]]></content>
+<!-- 上面定义代码段内容，注意空格也会是代码段的一部分;
+    ${数字:提示文字},触发后每次按tab后依次在数字跳转，并选中提示文字
+ -->
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <!-- 下面定义触发文字，只要输入这段文字加tab就可以生成上面的代码段 -->
+    <tabTrigger>hsp</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- 下面定义触发的文件类型，需要在对应类型文件中才会触发，包括ctrl+shift+p中查找snippet
+        可以包含多个文件类型，用逗号隔开;为空时表示对所有文件
+     -->
+    <!-- <scope>source.python</scope> -->
+    <scope>text.html,source.js</scope>
+    <description>hsp的snippet,这里是描述，可以不要，即可以直接删除本行</description>
+</snippet>

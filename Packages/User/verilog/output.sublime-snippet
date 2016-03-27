@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+output  reg     ${1:[${2:output_width}-1:0]} ${3:output_reg},
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>hsp_output</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.verilog,source.systemverilog</scope>
+    <description>输入output_reg</description>
+</snippet>

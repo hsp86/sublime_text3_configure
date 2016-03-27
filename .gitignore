@@ -1,0 +1,13 @@
+# 要忽略的目录和文件
+Cache
+Local
+
+bz2
+
+c2u_tmp
+Package\ Control.cache
+encoding_cache.json
+Package\ Control.last-run
+Package\ Control.merged-ca-bundle
+Package\ Control.user-ca-bundle
+Package\ Control.system-ca-bundle

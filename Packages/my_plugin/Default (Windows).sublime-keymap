@@ -1,0 +1,3 @@
+[//keys指定快捷键;command指定要执行.py文件中的命令
+    { "keys": ["ctrl+alt+l"], "command": "hsp" }
+]

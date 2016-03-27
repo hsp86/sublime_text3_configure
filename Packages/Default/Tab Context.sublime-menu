@@ -1,0 +1,9 @@
+[
+//修改caption的值即可修改为显示名
+	{ "command": "close_by_index", "args": { "group": -1, "index": -1 }, "caption": "关闭tab" },
+	{ "command": "close_others_by_index", "args": { "group": -1, "index": -1 }, "caption": "关闭其它所有tab" },
+	{ "command": "close_to_right_by_index", "args": { "group": -1, "index": -1 }, "caption": "关闭右边所有tab" },
+	{ "caption": "-" },
+	{ "command": "new_file", "caption": "新建文件" },
+	{ "command": "prompt_open_file", "caption": "打开文件" }
+]

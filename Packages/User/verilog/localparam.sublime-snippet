@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+localparam      ${1:localparam_name} = ${2:32};
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>hsp_localparam</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.verilog,source.systemverilog</scope>
+    <description>输入localparam</description>
+</snippet>
