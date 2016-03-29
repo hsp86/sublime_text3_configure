@@ -1,7 +1,7 @@
 import sublime, sublime_plugin
 import time
 
-# 将文件中的yyyy-mm-dd替换为当前时间，并且将当前时间字符串显示在状态栏和剪贴板
+# 将文件中的2016-03-29替换为当前时间，并且将当前时间字符串显示在状态栏和剪贴板
 # --胡祀鹏
 
 class GetdateCommand(sublime_plugin.TextCommand):
@@ -21,12 +21,15 @@ class GetdateCommand(sublime_plugin.TextCommand):
         reg = self.view.find(date_str,0,sublime.IGNORECASE)
         if reg != None:                                                 # 不加这个条件也不会出错，最好加上
             self.view.replace(edit,reg,t)
-
+            
         # 以下为将“module 模块名.v”替换为“module 模块名”，如果存在；用于配合verilog的module snippet
-        module_str = 'module test.v';
+        file_full_name = self.view.file_name()                          # 这个文件名包括路径
+        last_index = file_full_name.rfind('\\')                         # 得到最后一个\的位置
+        file_name = file_full_name[last_index+1:]                       # 取得最后的文件名，不包括路径
+        module_str = 'module '+ file_name
         reg = self.view.find(module_str,0,sublime.IGNORECASE)
         if reg != None:                                                 # 如果存在这个字符串
-            self.view.replace(edit,reg,module_str[:-2])
+            self.view.replace(edit,reg,module_str[:-2])                 # 去掉后缀.v并插入
 
 
 
