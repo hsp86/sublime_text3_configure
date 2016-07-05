@@ -1,5 +1,5 @@
 {
-    "shell_cmd": "python $file",//指定执行的命令,还可以执行命令文件
+    "shell_cmd": "start cmd /c \"python $file & pause\"",//指定执行的命令,还可以执行命令文件；添加start cmd /c 在新窗口中打开
     "working_dir":"$file_path",//指定运行目录为当前目录
     "selector":["source.python"]//指定在哪种文件中用ctrl+b执行这里的命令
 }

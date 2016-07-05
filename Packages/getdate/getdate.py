@@ -1,7 +1,7 @@
 import sublime, sublime_plugin
 import time
 
-# 将文件中的2016-03-29替换为当前时间，并且将当前时间字符串显示在状态栏和剪贴板
+# 将文件中的yyyy-mm-dd替换为当前时间，并且将当前时间字符串显示在状态栏和剪贴板
 # --胡祀鹏
 
 class GetdateCommand(sublime_plugin.TextCommand):
