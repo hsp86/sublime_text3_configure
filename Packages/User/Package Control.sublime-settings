@@ -6,10 +6,12 @@
 	"installed_packages":
 	[
 		"ConvertToUTF8",
+		"CTags",
 		"Emmet",
 		"getdate",
 		"jQuery",
 		"my_plugin",
+		"OmniMarkupPreviewer",
 		"Package Control",
 		"SystemVerilog",
 		"Tag",
