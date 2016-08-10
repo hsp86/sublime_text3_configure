@@ -84,6 +84,6 @@
         //                   ("em" and "en") dashes, etc.
         //                   See: http://daringfireball.net/projects/smartypants/
         //                   And: https://github.com/waylan/Python-Markdown/blob/master/docs/extensions/smarty.txt
-        "extensions": ["tables", "strikeout", "fenced_code", "codehilite","toc"]
+        "extensions": ["extra", "strikeout", "codehilite","toc"]// "tables", "fenced_code",
     }
 }
