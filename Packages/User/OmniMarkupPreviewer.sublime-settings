@@ -2,7 +2,7 @@
 {
     "server_host": "192.168.0.100",
     "server_port": 51004,
-    "refresh_on_modified": true,
+    "refresh_on_modified": false,
     // delay after modified, in milliseconds
     "refresh_on_modified_delay": 500,
     "refresh_on_saved": true,
@@ -40,7 +40,7 @@
     //   * It may be slow base on your computer/browser performance, so you may want to
     //     tune the following options:
     //         "ajax_polling_interval", "refresh_on_modified" and "refresh_on_modified_delay"
-    "mathjax_enabled": false,
+    "mathjax_enabled": true,
 
     // Custom options for exporting
     "export_options" : {
@@ -84,6 +84,6 @@
         //                   ("em" and "en") dashes, etc.
         //                   See: http://daringfireball.net/projects/smartypants/
         //                   And: https://github.com/waylan/Python-Markdown/blob/master/docs/extensions/smarty.txt
-        "extensions": ["extra", "strikeout", "codehilite","toc"]// "tables", "fenced_code",
+        "extensions": ["extra", "codehilite", "meta", "toc", "nl2br", "strikeout", "subscript", "superscript", "smarty"]
     }
 }
