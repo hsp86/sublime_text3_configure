@@ -18,8 +18,8 @@
     // User templates should be placed into:
     //   ${packages}/User/OmniMarkupPreviewer/templates/
     // Requires browser reload
-    // Built-in templates: github, github-v1
-    "html_template_name": "github",
+    // Built-in templates: github, github-v1, hsp(支持流程图和序列图)
+    "html_template_name": "hsp",
 
     // Polling interval for content changes in web browsers, in milliseconds
     // Requires browser reload
@@ -84,6 +84,7 @@
         //                   ("em" and "en") dashes, etc.
         //                   See: http://daringfireball.net/projects/smartypants/
         //                   And: https://github.com/waylan/Python-Markdown/blob/master/docs/extensions/smarty.txt
-        "extensions": ["extra", "codehilite", "meta", "toc", "nl2br", "strikeout", "subscript", "superscript", "smarty"]
+        // "extensions": ["extra", "codehilite", "meta", "toc", "nl2br", "strikeout", "subscript", "superscript", "smarty"]
+        "extensions": ["extra", "codehilite", "meta", "toc", "strikeout", "subscript", "superscript", "smarty"]//, "nl2br"
     }
 }
