@@ -13,6 +13,8 @@ Package\ Control.user-ca-bundle
 Package\ Control.system-ca-bundle
 Installed Packages/Verilog/
 Verilog.sublime-package0
+# 证书文件
+*.crt
 
 Backup
 Index

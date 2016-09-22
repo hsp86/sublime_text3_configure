@@ -2,7 +2,7 @@
 	"auto_complete_commit_on_tab": true,
 	"color_scheme": "Packages/Color Scheme - Default/Monokai Bright.tmTheme",
 	"draw_white_space": "all",
-	"font_size": 21,
+	"font_size": 22,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -11,6 +11,17 @@
 	[
 		72
 	],
+	// "detect_indentation": false,
+	"trim_automatic_white_space": false,
+	"always_show_minimap_viewport": true,
+	"highlight_line": true,
+	"ensure_newline_at_eof_on_save": true,
+	"trim_trailing_white_space_on_save": true,
+	// "save_on_focus_lost": true,
+	"show_encoding": true,
+	"show_line_endings": true,
+	// "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS"],
+	//"file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db", "*.sublime-workspace"],
 	"tab_size": 4,
 	"translate_tabs_to_spaces": true
 }
