@@ -7,6 +7,12 @@ window.App.Options = {}
 $(function() {
   "use strict"
 
+  var draw_flowchart_sequence = function(){//实现流程图和序列图的绘制
+    $('.flowchart').flowChart();
+    // $(".sequence").sequenceDiagram({theme: 'hand'});
+    $(".sequence").sequenceDiagram({theme: 'simple'});
+  }
+
   // From http://www.softcomplex.com/docs/get_window_size_and_scrollbar_position.html
   var filterResult = function(win, docel, body) {
     var result = win ? win : 0
@@ -152,6 +158,7 @@ $(function() {
           } else {
             doAutoScroll()
           }
+          draw_flowchart_sequence();//实现流程图和序列图的绘制
           break
         }
       }).fail(function() {
@@ -167,6 +174,7 @@ $(function() {
     }, pollingInterval)
   }
 
+  draw_flowchart_sequence();//实现流程图和序列图的绘制
   // Start polling once page started
   poll()
 })

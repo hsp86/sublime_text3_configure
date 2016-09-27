@@ -41,7 +41,6 @@
   </script>
   <script type="text/javascript" src="/public/jquery-2.1.3.min.js"></script>
   <script type="text/javascript" src="/public/imagesloaded.pkgd.min.js"></script>
-  <script type="text/javascript" src="/public/app.js"></script>
   <!-- 流程图 -->
   <script src="/public/raphael/raphael.min.js"></script>
   <!-- <script src="/public/raphael/raphael.js"></script> -->
@@ -50,6 +49,8 @@
   <!-- <script src="/public/raphael/raphael-min.js"></script> -->
   <script src="/public/underscore/underscore-min.js"></script>
   <script src="/public/sequence/sequence-diagram-min.js"></script>
+
+  <script type="text/javascript" src="/public/app.js"></script>
   %if mathjax_enabled:
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -66,13 +67,6 @@
         'HTML-CSS': {
           imageFont: null
         }
-      });
-  </script>
-  <script>
-      $(function(){
-        $('.flowchart').flowChart();
-        // $(".sequence").sequenceDiagram({theme: 'hand'});
-        $(".sequence").sequenceDiagram({theme: 'simple'});
       });
   </script>
   <script type="text/javascript" src="/public/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
