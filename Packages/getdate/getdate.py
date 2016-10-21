@@ -32,7 +32,7 @@ class GetdateCommand(sublime_plugin.TextCommand):
             self.view.replace(edit,reg,module_str[:-2])                 # 去掉后缀.v并插入
 
 class CommentBackCommand(sublime_plugin.TextCommand):
-    '''本命令在光标行（支持多行）在对齐rulers（默认值72）处添加注释
+    '''本命令将光标移动到后面对齐rulers（若未设置rulers则默认为对齐72）后写注释；若已有注释符且位置小于(大于时不处理)rulers则移动到rulers对齐
     测试命令：view.run_command('comment_back')'''
     def run(self, edit):
         comment_str = "//  "                                            # 注释字符
@@ -42,10 +42,27 @@ class CommentBackCommand(sublime_plugin.TextCommand):
         for region in self.view.sel():                                  # 支持多行
             if region.empty():
                 line = self.view.line(region)
-                while len(line) < pos:
-                    self.view.insert(edit, line.end(), ' ')             # 没有达到rulers处就一直在行末添加空格
-                    line = self.view.line(region)
-            self.view.insert(edit, line.end(), comment_str)
+            #   方式1，while循环一个一个空格加入
+            #     while len(line) < pos:
+            #         self.view.insert(edit, line.end(), ' ')             # 没有达到rulers处就一直在行末添加空格
+            #         line = self.view.line(region)
+            # self.view.insert(edit, line.end(), comment_str)
+
+            reg = self.view.find(comment_str,line.begin())              # 从本行开始找注释字符，返回其区域
+            # sublime.status_message('reg begin is:'+str(reg.begin())+';'+str(line.begin())+';'+str(line.end())+';'+str(line.contains(reg)))
+            if line.contains(reg):                                      # 如果该行已有注释符则将其移到rulers对齐
+                comment_pos = reg.begin()
+                pos_aline = line.begin() + pos;
+                if comment_pos < pos_aline:                             # 注释所在位置小于需要的位置时添加空格，使其对齐
+                    self.view.insert(edit, comment_pos, ' '*(pos_aline - comment_pos))
+            elif len(line) < pos:
+                # 方式2，一次写入多个空格（不用while）
+                self.view.insert(edit, line.end(), ' '*(pos - len(line)))# 如果没有对齐后面(默认72)就插入空格
+                line = self.view.line(region)
+                self.view.insert(edit, line.end(), comment_str)         # 对齐后输出注释符
+            else:
+                self.view.insert(edit, line.end(), comment_str)         # 大于等于时直接输出注释符
+
     def is_visible(self):
         return self.view.file_name() is not None and (
             self.view.file_name()[-2:] in [".v",".c"] or
