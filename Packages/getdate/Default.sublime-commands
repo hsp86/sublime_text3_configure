@@ -1,6 +1,11 @@
+// 这里定义ctrl+shift+p中输入的命令
 [
     {
         "caption": "yyyy-mm-dd替换为当前时间",
         "command": "getdate"
+    },
+    {
+        "caption": "hsp_exe",
+        "command": "hsp_exe"
     }
 ]

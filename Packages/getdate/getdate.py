@@ -1,5 +1,5 @@
 import sublime, sublime_plugin
-import time
+import time,os
 
 # 胡祀鹏 设计制作
 
@@ -67,3 +67,25 @@ class CommentBackCommand(sublime_plugin.TextCommand):
         return self.view.file_name() is not None and (
             self.view.file_name()[-2:] in [".v",".c"] or
             self.view.file_name()[-3:] in [".sv",".py"])                # 只有这些文件时才可用
+
+class HspExeCommand(sublime_plugin.WindowCommand):
+    '''运行命令功能'''
+    def run(self):
+        self.window.show_input_panel(u"请输入命令：", "git ", self.on_done, None, None)
+
+    def on_done(self, text):
+        try:
+            file_full_name = self.window.active_view().file_name()      # 这个文件名包括路径
+            last_index = file_full_name.rfind('\\')                     # 得到最后一个\的位置
+            file_path = file_full_name[:last_index]                     # 取得文件路径
+            fid = os.popen("cd " + file_path + "&" + text)              # 先进入本文件所在路径，后执行输入的命令
+            res_str = fid.read()
+            sublime.status_message(res_str)                             # 两种方式输出
+            print(res_str)
+            statu_cod = fid.close()                                     # 命令要等待执行完且等待关闭后返回
+            if statu_cod != None:
+                sublime.status_message(u'命令执行失败！')
+                print(u'命令执行失败！')
+        except ValueError:
+            pass
+
