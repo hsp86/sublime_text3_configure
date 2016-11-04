@@ -123,6 +123,8 @@ class OmniMarkupPreviewCommand(sublime_plugin.TextCommand):
 
     def is_enabled(self):
         return RendererManager.any_available_renderer_for_view(self.view)
+    def is_visible(self):
+        return RendererManager.any_available_renderer_for_view(self.view)
 
 
 class OmniMarkupCleanCacheCommand(sublime_plugin.ApplicationCommand):
@@ -196,6 +198,9 @@ class OmniMarkupExportCommand(sublime_plugin.TextCommand):
 
     def is_enabled(self):
         return RendererManager.any_available_renderer_for_view(self.view)
+    def is_visible(self):
+        return RendererManager.any_available_renderer_for_view(self.view)
+
 
 
 class ThrottleQueue(threading.Thread):
