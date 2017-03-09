@@ -78,7 +78,10 @@ class HspExeCommand(sublime_plugin.WindowCommand):
             file_full_name = self.window.active_view().file_name()      # 这个文件名包括路径
             last_index = file_full_name.rfind('\\')                     # 得到最后一个\的位置
             file_path = file_full_name[:last_index]                     # 取得文件路径
-            fid = os.popen("cd " + file_path + "&" + text)              # 先进入本文件所在路径，后执行输入的命令
+            disk_index = file_full_name.find(':')
+            disk = file_full_name[:disk_index]                          # 获取盘符
+            cmd_str = disk + ": & cd " + file_path + "&" + text
+            fid = os.popen(cmd_str)                                     # 先进入本文件所在路径，后执行输入的命令
             res_str = fid.read()
             sublime.status_message(res_str)                             # 两种方式输出
             print(res_str)
