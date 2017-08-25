@@ -6,7 +6,7 @@
 	"draw_minimap_border": true,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
-	"font_size": 28,
+	"font_size": 24,
 	"highlight_line": true,
 	"ignored_packages":
 	[
